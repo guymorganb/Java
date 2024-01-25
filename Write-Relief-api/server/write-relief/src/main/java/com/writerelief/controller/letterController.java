@@ -7,7 +7,41 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-
+/**
+  Client
+  │  
+  │ (HTTP Request)
+  ▼
+Controller
+  │  
+  │ (Method call with params)
+  ▼
+Service
+  │  
+  │ (Business logic / Method call)
+  ▼
+Repository
+  │  
+  │ (Database operation)
+  ▼
+Model / Database
+  │  
+  │ (Results / Data)
+  ▲
+Repository
+  │  
+  │ (Processed data / Entities)
+  ▲
+Service
+  │  
+  │ (Optional additional processing)
+  ▲
+Controller
+  │  
+  │ (HTTP Response)
+  ▲
+Client
+ */
 @RestController
 @RequestMapping("/letters")
 public class LetterController {

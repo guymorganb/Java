@@ -27,15 +27,17 @@ public class LetterService {
         this.letterRepository = letterRepository;
     }
 
-    // Saves a letter and returns a Mono that will emit the saved Letter once the save operation completes
+    // Saves a letter and returns a Mono that will emit the saved Letter once the
+    // save operation completes
     public Mono<Letter> saveLetter(Mono<Letter> letterMono) {
         return letterMono.flatMap(letterRepository::save);
     }
 
-   // Retrieves all letters as a Flux. Flux represents a sequence of 0..N items, emitted asynchronously
-   public Flux<Letter> getAllLetters() {
-    return letterRepository.findAll();
-}
+    // Retrieves all letters as a Flux. Flux represents a sequence of 0..N items,
+    // emitted asynchronously
+    public Flux<Letter> getAllLetters() {
+        return letterRepository.findAll();
+    }
 
     // Additional service methods can be added as needed
 }
