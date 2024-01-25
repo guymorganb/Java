@@ -37,7 +37,7 @@ All projects are open-sourced under the MIT license, as found in the LICENSE fil
 ## Contact
 
 If you have questions dont hesitate to reach me at guymorganb@gmail.com
-give me a follow on instagram if your in the neighborhood! @guyycodes, Id love to keep making more useful things. 
+give me a follow on instagram if you found this useful! @guyycodes, Id love to keep making more useful things.
 
 ## Note
 
