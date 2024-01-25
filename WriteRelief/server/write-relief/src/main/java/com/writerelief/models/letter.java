@@ -3,7 +3,7 @@ package com.writerelief.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document // This annotation identifies it as a document stored in MongoDB
+@Document // This annotation identifies it as a document stored in MongoDB it represents a document in your MongoDB database.
 public class Letter {
 
     private String id;
