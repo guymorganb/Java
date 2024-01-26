@@ -8,9 +8,9 @@ This repository is a collection of Java projects ranging from simple application
 
 - **JavaSudokuSolver**: An application that can solve Sudoku puzzles programmatically using Java. It demonstrates algorithmic problem-solving and object-oriented programming principles.
 
-- **tech-news-java-api**: A full-stack Spring application that serves as an API for tech news. This project showcases RESTful API development with Spring Boot and its integration with front-end technologies.
+- **tech-news-java-api**: A full-stack Spring application that serves as an API for tech news. This project showcases RESTful API development with Spring Boot and its integration with front-end technologies, *a recent repository refactoring has cause me to need to reimplement this.
 
-- **WriteRelief**: An ongoing project aimed at being a full-stack application with a Java backend and a React frontend. The goal is to provide a platform for writers to find relief by expressing themselves through writing. (Work in progress)
+- **WriteRelief**: An ongoing project aimed at being a full-stack application with a Java backend and a React frontend. The goal is to provide a platform for writers to find relief by expressing themselves through writing, *a recent repository refactoring has cause me to need to reimplement this.
 
 Each project is encapsulated in its own directory and includes all necessary files and configurations to run the applications.
 
