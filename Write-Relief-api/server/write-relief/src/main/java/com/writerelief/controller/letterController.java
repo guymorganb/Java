@@ -5,6 +5,8 @@ import com.writerelief.models.Letter;
 import com.writerelief.service.LetterService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 /**
@@ -46,7 +48,8 @@ Client
 @RequestMapping("/letters")
 public class LetterController {
 
-    private final LetterService letterService;
+    @Autowired
+    private LetterService letterService;
 
     public LetterController(LetterService letterService) {
         this.letterService = letterService;
@@ -64,5 +67,9 @@ public class LetterController {
         return letterService.getAllLetters();
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteLetter(@PathVariable String id) {
+        letterService.deleteLetter(id);
+    }
     // You can add more endpoints to handle different CRUD operations
 }

@@ -3,10 +3,11 @@ package com.writerelief.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document // This annotation identifies it as a document stored in MongoDB it represents a
-          // document in your MongoDB database.
+// This annotation identifies it as a document stored in MongoDB it represents a
+@Document // document in your MongoDB database.
 public class Letter {
 
+    @Id // This annotation identifies the field as the primary key of the document.
     private String id;
 
     private String content; // Example field
@@ -16,8 +17,7 @@ public class Letter {
     public Letter() {
     }
 
-    public Letter(String id, String content) {
-        this.id = id;
+    public Letter(String content) {
         this.content = content;
     }
 

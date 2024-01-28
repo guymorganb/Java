@@ -12,4 +12,6 @@ import com.writerelief.models.Letter;
 @Repository
 public interface LetterRepository extends ReactiveMongoRepository<Letter, String> {
     // Custom query methods can be defined here
+
+    
 }

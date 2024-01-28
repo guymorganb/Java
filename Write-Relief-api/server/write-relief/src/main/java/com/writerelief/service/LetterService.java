@@ -8,7 +8,6 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
-
 /**
  * The service class, will be returning reactive types (Mono and Flux),
  * which are at the heart of the reactive programming model provided by Project
@@ -19,10 +18,10 @@ import java.util.List;
 @Service
 public class LetterService {
 
-    private final LetterRepository letterRepository;
+    // required by your beans.
+    @Autowired// annotation is used in Spring to automatically inject the dependencies
+    private LetterRepository letterRepository;
 
-    @Autowired // annotation is used in Spring to automatically inject the dependencies
-               // required by your beans.
     public LetterService(LetterRepository letterRepository) {
         this.letterRepository = letterRepository;
     }
@@ -37,6 +36,11 @@ public class LetterService {
     // emitted asynchronously
     public Flux<Letter> getAllLetters() {
         return letterRepository.findAll();
+    }
+
+       // Method to delete a letter by its ID
+       public void deleteLetter(String id) {
+        letterRepository.deleteById(id);
     }
 
     // Additional service methods can be added as needed
