@@ -1,6 +1,9 @@
 package com.writerelief.models;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -18,6 +21,8 @@ public class User {
     private String password;
 
     private String email;
+    // keep a list of the letters written by the user
+    private List<String> letterIds;
 
     public User() {
     }
@@ -47,6 +52,7 @@ public class User {
     public void setId(String id) {
         this.id = id;
     }
+    // 
     // Verify Password
     public boolean checkPassword(String plainPassword) {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
