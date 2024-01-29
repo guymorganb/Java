@@ -1,25 +1,25 @@
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import Home from './components/home/index.js';
+import {LandingPage} from './client/write-relief/src/components/landingPage/landing.jsx';
 
 function App() {
 
   const router = createBrowserRouter(
       createRoutesFromElements(
           <>
-            <Route path="/" index element={<Home />} />
+            <Route path="/" index element={<LandingPage />} />
             {/* create Service and booking routed in another route called protected routes */}
-            <Route path="/services" element={<ProtectedRoutes element={<Services />} />} />
+            {/* <Route path="/services" element={<ProtectedRoutes element={<Services />} />} /> */}
             {/* Appointments page Route */}
-            <Route path="/booking" element={<ProtectedRoutes element={<Appointments />} />} />
+            {/* <Route path="/booking" element={<ProtectedRoutes element={<Appointments />} />} /> */}
 
             {/* Reviews page Route */}
-            <Route path="/reviews" element={<ProtectedRoutes element={<Reviews />} />} />
+            {/* <Route path="/reviews" element={<ProtectedRoutes element={<Reviews />} />} /> */}
 
             {/* Privacy Policy Route */}
-            <Route path="/privacy" element={<PrivacyPolicy />} />
+            {/* <Route path="/privacy" element={<PrivacyPolicy />} /> */}
             {/* Terms of use Route */}
-            <Route path="/terms" element={<TermsAndConditions />} />
+            {/* <Route path="/terms" element={<TermsAndConditions />} /> */}
           </>
       )
   )
