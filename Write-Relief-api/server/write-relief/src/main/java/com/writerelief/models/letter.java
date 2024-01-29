@@ -10,6 +10,8 @@ public class Letter {
     @Id // This annotation identifies the field as the primary key of the document.
     private String id;
 
+    private String title;
+
     private String content;
     // add a reference to the userID who wrote the letter
     private String userID;
@@ -17,13 +19,14 @@ public class Letter {
     // Constructors, getters, and setters
 
     public Letter() {
+    
     }
 
- // Constructor with parameters for content and userID.
- public Letter(String content, String userID) {
-    this.content = content;
-    this.userID = userID;
-}
+    // Constructor with parameters for content and userID.
+    public Letter(String content, String userID) {
+        this.content = content;
+        this.userID = userID;
+    }
 
     // Getters and setters for all fields
 
@@ -51,4 +54,11 @@ public class Letter {
         return userID;
     }
 
+    public void setTitle(String title) {
+        this.title = title;  // set the title of the letter to the title parameter. 
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }

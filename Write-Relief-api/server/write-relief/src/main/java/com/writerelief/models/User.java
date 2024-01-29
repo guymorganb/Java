@@ -52,7 +52,10 @@ public class User {
     public void setId(String id) {
         this.id = id;
     }
-    // 
+    // return a list of letters associated with the user
+    public List<String> getLetterIds() {
+        return letterIds;
+    }
     // Verify Password
     public boolean checkPassword(String plainPassword) {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();

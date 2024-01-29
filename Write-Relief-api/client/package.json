@@ -1,7 +1,6 @@
 {
   "name": "client",
   "private": true,
-  "proxy": "http://localhost:3002",
   "engines": {
     "node": "18.x",
     "npm": "7.x"

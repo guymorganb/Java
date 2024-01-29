@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "WriteReliefApplication",
+            "request": "launch",
+            "mainClass": "com.writerelief.writerelief.WriteReliefApplication",
+            "projectName": "write-relief"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -15,7 +22,7 @@
             "name": "Debug (Launch) - WriterReliefApplication",
             "request": "launch",
             "mainClass": "com.writerelief.WriterReliefApplication",
-            "projectName": "Write-Relief-api" // Replace this with the name of your project, if different
+            "projectName": "Write-Relief-api"
         }
     ]
 }
