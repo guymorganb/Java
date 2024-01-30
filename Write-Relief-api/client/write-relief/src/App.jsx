@@ -1,6 +1,6 @@
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import {LandingPage} from './components/landingPage/landing.jsx';
+import {LandingPage} from './components/landingPage/index.jsx';
 
 function App() {
 
