@@ -7,19 +7,19 @@ import { LeftSide } from "../components/landingPage/leftSide.jsx";
 import { RightSide } from "../components/landingPage/rightSide.jsx";
 import { ArrowSvg } from '../assets/custom_css_svgs/arrow_svg.jsx';
 import { Footer } from '../components/landingPage/footer.jsx';
-
+import {Bg2} from "../assets/util/bg2.jsx";
 
 export const LandingPage = () => {
   
     const bgStyle = {
-        backgroundImage: `url("data:image/svg+xml;utf8,${encodeURIComponent(Bg)}")`,
+        backgroundImage: `url("data:image/svg+xml;utf8,${encodeURIComponent(Bg2)}")`,
         zIndex: -2 // Background
     }
 
     return(
         <>
              <Box>
-                    <ArrowSvg/>
+                    {/* <ArrowSvg/> */}
                 </Box>
             <Box className="leading-normal tracking-normal text-gray-900" fontFamily="'Source Sans Pro', sans-serif">
                 <Box className="h-screen pb-14 bg-right bg-cover" style={bgStyle}>
@@ -27,10 +27,10 @@ export const LandingPage = () => {
                         <Nav/>
                     </Box>
                     <Box>
-                        <LeftSide/>
+                        {/* <LeftSide/> */}
                     </Box>
                     <Box>
-                        <RightSide/> 
+                        {/* <RightSide/>  */}
                     </Box>
                     <Box>
                         <Footer/> 

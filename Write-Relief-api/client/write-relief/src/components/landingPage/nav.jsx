@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
-import { Box, VStack, List, ListItem, Link, chakra, Text } from '@chakra-ui/react';
+import { Box, VStack, List, ListItem, Link, chakra, Text, Image } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { IconStyle } from '../../assets/custom_css_svgs/iconStyles.jsx';
 import { CustomTooltip } from '../../assets/custom_css_svgs/customeTooltip.jsx';
@@ -10,6 +10,7 @@ import {SvgPath} from '../../assets/util/svgPath.jsx';
 import {AdditionalPathD} from '../../assets/util/svgPath.jsx';
 import { FaInstagram, FaGithub } from 'react-icons/fa';
 import { keyframes } from 'styled-components';
+import { BlackWhite } from '../../assets/util/black_white_bg.jsx';
 // Convert Chakra UI Box to a motion component
 const MotionBox = motion(Box);
 
@@ -111,6 +112,7 @@ export const Nav = () => {
                 
             }}
         >
+            <Box className="w-full container mx-auto pt-8 ">
         <Box position="relative" className="w-full flex flex-row justify-center items-center mx-auto rounded-lg shadow-lg"> {/* Relative Container */}
             <Box as='svg' position="absolute" top="0" left="0" width="100%" height={`${height}px`} viewBox={`350 50 ${width} ${height}`} >
                 <defs>
@@ -125,12 +127,12 @@ export const Nav = () => {
             <Box ref={pencilRef} as="span" position="absolute" left="-135px" top="-73px" fontSize="20px" zIndex="2">
                 {pencilEmoji}
             </Box>
-            <Box className="w-full container mx-auto pt-9 ">
+            
                 <Box className="w-full flex items-center justify-between">
-                    <Link className="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#" style={{ textDecoration: 'none' }} >
-                        <svg className="h-8 fill-current text-indigo-600 pr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9c1.361-5.928 8-7 8-7v-2l4 3.982-4 4.018v-2s-5.102-.104-8 3zm5 1h-10v1h10v-1zm3 .835v2.708c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h10.741c1.176-.758 2.35-1.242 3.259-1.541v-.459h-16v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-5.561l-2 2.01zm-13 3.165h10v-1h-10v1zm3.609-7h-3.609v1h3.266l.343-1z"/></svg>
+                    <Link className="flex items-center no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#" style={{ textDecoration: 'none' }} >
+                    <Image src={`data:image/svg+xml;utf8,${encodeURIComponent(BlackWhite)}`} alt="Right Side Image" />
                         <CustomUnderline_middle_to_Edges>
-                            <Text className='WR' boxShadow="0 10px 10px rgba(0, 0, 0, 0.4)" borderRadius="10%">Write Relief</Text> 
+                            <Text whiteSpace={["normal", "nowrap", "nowrap", "nowrap", "nowrap"]} overflow="visible" className='WR'  boxShadow="0 10px 10px rgba(0, 0, 0, 0.4)" borderRadius="10%">Write Relief</Text> 
                         </CustomUnderline_middle_to_Edges>
                     </Link>
                     <Box>
