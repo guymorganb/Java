@@ -56,10 +56,10 @@ public class LetterService {
     // Method to find letters by a user's ID. Returns a Flux of Letter.
     // Flux represents a reactive sequence of multiple items.
 
-    // public Flux<Letter> findByUserId(String id) {
-    //     // findByUserId method of the repository is used, which returns a Flux of Letter
-    //     return letterRepository.findByUserId(id);
-    // }
+    public Flux<Letter> findByUserId(String id) {
+        // findByUserId method of the repository is used, which returns a Flux of Letter
+        return letterRepository.findByUserId(id);
+    }
 
     public Flux<Letter> findLettersByTag(String tag) {
         // Choose either method based on your preference or requirements

@@ -30,7 +30,9 @@ public interface LetterRepository extends ReactiveMongoRepository<Letter, String
     // user ID.
     // The method returns a Flux<Letter>, representing a reactive stream of Letter
     // objects.
-    // Flux<Letter> findByUserId(String userID);
+
+    @Query("{ 'userID': ?0 }")
+    Flux<Letter> findByUserId(String userID);
 
     // OR use @Query annotation for more flexibility
     // @Query annotation defines a custom query where the tags field must contain

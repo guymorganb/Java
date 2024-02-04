@@ -96,12 +96,12 @@ public class LetterController {
   // Endpoint for retrieving all letters for a specific user. It handles GET
   // requests to "/letters/user/{userId}"
 
-  // @GetMapping("/user/{userId}")
-  // public Flux<Letter> getLettersByUserId(@PathVariable String userID) {
-  //   // Calls findByUserId method from letterService to fetch letters belonging to a
-  //   // specific user
-  //   return letterService.findByUserId(userID);
-  // }
-  
+  @GetMapping("/user/{userId}")
+  public Flux<Letter> getLettersByUserId(@PathVariable String userID) {
+    // Calls findByUserId method from letterService to fetch letters belonging to a
+    // specific user
+    return letterService.findByUserId(userID);
+  }
+
   // You can add more endpoints to handle different CRUD operations
 }
