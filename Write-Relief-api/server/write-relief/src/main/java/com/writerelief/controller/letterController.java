@@ -77,6 +77,13 @@ public class LetterController {
     // Calls getAllLetters method from letterService to fetch all letters
     return letterService.getAllLetters();
   }
+  
+  // endpoint for getting tags
+  @GetMapping("/tag/{tag}")
+  public Flux<Letter> getLettersByTag(@PathVariable String tag) {
+      // Call the service method to fetch letters by tag
+      return letterService.findLettersByTag(tag);
+  }
 
   // Endpoint for deleting a letter by its ID. It handles DELETE requests to
   // "/letters/{id}"

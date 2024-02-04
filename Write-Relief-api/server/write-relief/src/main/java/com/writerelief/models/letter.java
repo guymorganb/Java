@@ -114,7 +114,7 @@ public class Letter {
     public void setTags(List<String> tags) {
         this.tags = tags;
     }
-    
+
     public String getCategory() {
         return category;
     }
@@ -175,11 +175,30 @@ public class Letter {
         return slug;
     }
 
+    public void setDate(int date) {
+        this.date = String.valueOf(date);
+    }
+    /**
+     * Generates a URL-friendly slug from a string.
+     * 
+     * @param input The input string to convert into a slug.
+     * @return A URL-friendly slug.
+     */
+    public String generateSlug(String input) {
+        if (input == null || input.isEmpty()) {
+            return "";
+        }
+        
+        String slug = input.toLowerCase() // Convert to lower case
+                .replaceAll("[^a-z0-9\\s]", "") // Replace all non-alphanumeric characters except spaces
+                .replaceAll("\\s+", "-") // Replace one or more spaces with a single hyphen
+                .replaceAll("^-+|-+$", ""); // Trim leading or trailing hyphens
+        
+        return slug;
+    }
+    
     public void setSlug(String slug) {
         this.slug = slug;
     }
 
-    public void setDate(int date) {
-        this.date = String.valueOf(date);
-    }
 }
