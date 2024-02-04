@@ -1,20 +1,23 @@
-package com.writerelief.config;
+package com.writerelief.writerelief.config;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+
 import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
-import com.writerelief.models.Letter;
-import com.writerelief.repository.LetterRepository;
-
-
+import com.writerelief.writerelief.models.Letter;
+import com.writerelief.writerelief.repository.LetterRepository;
 
 @Component
 public class DatabaseSeeder {
-
+    /**
+     * Defined DatabaseSeeder class with a @Bean method that returns a
+     * CommandLineRunner, Spring Boot will automatically pick it up and run it after
+     * the application context is fully loaded and right before the application
+     * starts serving traffic
+     */
     @Bean
     CommandLineRunner initDatabase(LetterRepository repository) {
         return args -> {
@@ -42,7 +45,8 @@ public class DatabaseSeeder {
 
                 // Save letters to the database
                 List<Letter> letters = List.of(letter1 /* , letter2, letter3, ... */);
-                repository.saveAll(letters).subscribe(null, error -> System.err.println("Failed to save letters: " + error) // Log or handle the error
+                repository.saveAll(letters).subscribe(null,
+                        error -> System.err.println("Failed to save letters: " + error) // Log or handle the error
                 );
 
             }

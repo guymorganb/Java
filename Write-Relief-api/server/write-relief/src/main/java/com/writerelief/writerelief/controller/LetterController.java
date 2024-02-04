@@ -1,8 +1,8 @@
-package com.writerelief.controller;
+package com.writerelief.writerelief.controller;
 
 import org.springframework.web.bind.annotation.*;
-import com.writerelief.models.Letter;
-import com.writerelief.service.LetterService;
+import com.writerelief.writerelief.models.Letter;
+import com.writerelief.writerelief.service.LetterService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -77,12 +77,12 @@ public class LetterController {
     // Calls getAllLetters method from letterService to fetch all letters
     return letterService.getAllLetters();
   }
-  
+
   // endpoint for getting tags
   @GetMapping("/tag/{tag}")
   public Flux<Letter> getLettersByTag(@PathVariable String tag) {
-      // Call the service method to fetch letters by tag
-      return letterService.findLettersByTag(tag);
+    // Call the service method to fetch letters by tag
+    return letterService.findLettersByTag(tag);
   }
 
   // Endpoint for deleting a letter by its ID. It handles DELETE requests to
@@ -95,11 +95,13 @@ public class LetterController {
 
   // Endpoint for retrieving all letters for a specific user. It handles GET
   // requests to "/letters/user/{userId}"
-  @GetMapping("/user/{userId}")
-  public Flux<Letter> getLettersByUserId(@PathVariable String userId) {
-    // Calls findByUserId method from letterService to fetch letters belonging to a
-    // specific user
-    return letterService.findByUserId(userId);
-  }
+
+  // @GetMapping("/user/{userId}")
+  // public Flux<Letter> getLettersByUserId(@PathVariable String userID) {
+  //   // Calls findByUserId method from letterService to fetch letters belonging to a
+  //   // specific user
+  //   return letterService.findByUserId(userID);
+  // }
+  
   // You can add more endpoints to handle different CRUD operations
 }

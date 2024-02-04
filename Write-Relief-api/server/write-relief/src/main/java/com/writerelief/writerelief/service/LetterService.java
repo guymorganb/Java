@@ -1,16 +1,15 @@
-package com.writerelief.service;
+package com.writerelief.writerelief.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import org.springframework.lang.NonNull;
 
-import com.writerelief.models.Letter;
-import com.writerelief.repository.LetterRepository;
+import com.writerelief.writerelief.models.Letter;
+import com.writerelief.writerelief.repository.LetterRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.util.List;
 /**
  * The service class, will be returning reactive types (Mono and Flux),
  * which are at the heart of the reactive programming model provided by Project
@@ -18,7 +17,8 @@ import java.util.List;
  * A Mono represents a stream of 0 to 1 elements, and Flux represents a stream
  * of 0 to N elements.
  */
-// Marks this class as a Spring service, a special type of component for holding business logic
+// Marks this class as a Spring service, a special type of component for holding
+// business logic
 @Service
 public class LetterService {
 
@@ -31,10 +31,12 @@ public class LetterService {
         this.letterRepository = letterRepository;
     }
 
-    // Method for saving a letter. It takes a Mono of Letter, flattens it, and saves it to the repository.
+    // Method for saving a letter. It takes a Mono of Letter, flattens it, and saves
+    // it to the repository.
     // Returns a Mono that emits the saved Letter object.
     public Mono<Letter> saveLetter(Mono<Letter> letterMono) {
-        // flatMap is used to transform the Mono<Letter> to another Mono (Mono from the save operation)
+        // flatMap is used to transform the Mono<Letter> to another Mono (Mono from the
+        // save operation)
         return letterMono.flatMap(letterRepository::save);
     }
 
@@ -53,10 +55,11 @@ public class LetterService {
 
     // Method to find letters by a user's ID. Returns a Flux of Letter.
     // Flux represents a reactive sequence of multiple items.
-    public Flux<Letter> findByUserId(String id){
-        // findByUserId method of the repository is used, which returns a Flux of Letter
-        return letterRepository.findByUserId(id);
-    }
+
+    // public Flux<Letter> findByUserId(String id) {
+    //     // findByUserId method of the repository is used, which returns a Flux of Letter
+    //     return letterRepository.findByUserId(id);
+    // }
 
     public Flux<Letter> findLettersByTag(String tag) {
         // Choose either method based on your preference or requirements

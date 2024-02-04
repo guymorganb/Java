@@ -1,4 +1,4 @@
-package com.writerelief.models;
+package com.writerelief.writerelief.models;
 
 import java.util.List;
 import java.util.Set;
@@ -9,7 +9,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 // This annotation identifies it as a document stored in MongoDB it represents a
 @Document // document in your MongoDB database.
 public class Letter {
-// MongoDB will automatically generate a unique ID for new documents if the ID field is null.
+    // MongoDB will automatically generate a unique ID for new documents if the ID
+    // field is null.
     @Id // This annotation identifies the field as the primary key of the document.
     private String id;
     private String title;
@@ -19,7 +20,7 @@ public class Letter {
     private int likes; // Number of likes
     private Set<String> bookmarkedUsers; // Users who have bookmarked the blog
     private int trending; // Trending score or rank
-    private List<String> tags; // Tags associated with the blog
+    private List<String> tag; // Tags associated with the blog
     private String category; // Blog category
     private String readTime; // Estimated read time
     private String lastUpdated; // Timestamp for the last update
@@ -28,11 +29,11 @@ public class Letter {
     private String summary; // Short summary or excerpt
     private String seoDescription; // SEO meta description
     private String slug; // URL-friendly slug
-    
+
     // Constructors, getters, and setters
 
     public Letter() {
-    
+
     }
 
     // Constructor with parameters for content and userID.
@@ -68,7 +69,7 @@ public class Letter {
     }
 
     public void setTitle(String title) {
-        this.title = title;  // set the title of the letter to the title parameter. 
+        this.title = title; // set the title of the letter to the title parameter.
     }
 
     public String getTitle() {
@@ -108,11 +109,11 @@ public class Letter {
     }
 
     public List<String> getTags() {
-        return tags;
+        return tag;
     }
 
-    public void setTags(List<String> tags) {
-        this.tags = tags;
+    public void setTags(List<String> tag) {
+        this.tag = tag;
     }
 
     public String getCategory() {
@@ -134,7 +135,7 @@ public class Letter {
     public String getLastUpdated() {
         return lastUpdated;
     }
-    
+
     public void setLastUpdated(String lastUpdated) {
         this.lastUpdated = lastUpdated;
     }
@@ -166,7 +167,7 @@ public class Letter {
     public String getSeoDescription() {
         return seoDescription;
     }
-    
+
     public void setSeoDescription(String seoDescription) {
         this.seoDescription = seoDescription;
     }
@@ -178,6 +179,7 @@ public class Letter {
     public void setDate(int date) {
         this.date = String.valueOf(date);
     }
+
     /**
      * Generates a URL-friendly slug from a string.
      * 
@@ -188,15 +190,15 @@ public class Letter {
         if (input == null || input.isEmpty()) {
             return "";
         }
-        
+
         String slug = input.toLowerCase() // Convert to lower case
                 .replaceAll("[^a-z0-9\\s]", "") // Replace all non-alphanumeric characters except spaces
                 .replaceAll("\\s+", "-") // Replace one or more spaces with a single hyphen
                 .replaceAll("^-+|-+$", ""); // Trim leading or trailing hyphens
-        
+
         return slug;
     }
-    
+
     public void setSlug(String slug) {
         this.slug = slug;
     }

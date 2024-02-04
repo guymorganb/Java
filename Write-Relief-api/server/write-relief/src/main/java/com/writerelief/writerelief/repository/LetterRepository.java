@@ -1,11 +1,9 @@
-package com.writerelief.repository;
-
-import java.util.List;
+package com.writerelief.writerelief.repository;
 
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
-import com.writerelief.models.Letter;
+import com.writerelief.writerelief.models.Letter;
 
 import reactor.core.publisher.Flux;
 
@@ -32,7 +30,7 @@ public interface LetterRepository extends ReactiveMongoRepository<Letter, String
     // user ID.
     // The method returns a Flux<Letter>, representing a reactive stream of Letter
     // objects.
-    Flux<Letter> findByUserId(String userId);
+    // Flux<Letter> findByUserId(String userID);
 
     // OR use @Query annotation for more flexibility
     // @Query annotation defines a custom query where the tags field must contain

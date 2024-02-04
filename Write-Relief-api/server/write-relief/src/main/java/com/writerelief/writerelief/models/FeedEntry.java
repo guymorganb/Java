@@ -1,12 +1,13 @@
-package com.writerelief.models;
+package com.writerelief.writerelief.models;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
 @Document // document in your MongoDB database.
 public class FeedEntry {
-    
+
     // feed entry is the list of sent letters basically
-    // each tim a user sends their letter, it goes in 
+    // each tim a user sends their letter, it goes in
     // as a feed entry into the database
 
     @Id // This annotation identifies the field as the primary key of the document.
@@ -31,7 +32,7 @@ public class FeedEntry {
     }
 
     public void setTitle(String title) {
-        this.title = title;  // set the title of the letter to the title parameter. 
+        this.title = title; // set the title of the letter to the title parameter.
     }
 
     public String getTitle() {
@@ -65,8 +66,8 @@ public class FeedEntry {
     public void setLikes(String likes) {
         this.likes = likes;
     }
-    
+
     public String getLikes() {
-        return this.likes;  // set the title of the letter to the title parameter. 
+        return this.likes; // set the title of the letter to the title parameter.
     }
 }
