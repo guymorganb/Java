@@ -6,11 +6,11 @@ import { motion } from 'framer-motion';
 import { IconStyle } from '../../assets/custom_css_svgs/iconStyles.jsx';
 import { CustomTooltip } from '../../assets/custom_css_svgs/customeTooltip.jsx';
 import { CustomUnderline_middle_to_Edges } from '../../assets/custom_css_svgs/customUnderline.jsx';
-import {SvgPath} from '../../assets/util/svgPath.jsx';
-import {AdditionalPathD} from '../../assets/util/svgPath.jsx';
+import {SvgPath} from '../../assets/util/backgrounds/svgPath.jsx';
+import {AdditionalPathD} from '../../assets/util/backgrounds/svgPath.jsx';
 import { FaInstagram, FaGithub } from 'react-icons/fa';
-import { keyframes } from 'styled-components';
-import { BlackWhite } from '../../assets/util/black_white_bg.jsx';
+import { ThemeToggleButton } from '../../assets/util/themeSwitch.jsx';
+import { BlackWhite } from '../../assets/util/backgrounds/black_white_bg.jsx';
 // Convert Chakra UI Box to a motion component
 const MotionBox = motion(Box);
 
@@ -135,8 +135,10 @@ export const Nav = () => {
                             <Text whiteSpace={["normal", "nowrap", "nowrap", "nowrap", "nowrap"]} overflow="visible" className='WR'  boxShadow="0 10px 10px rgba(0, 0, 0, 0.4)" borderRadius="10%">Write Relief</Text> 
                         </CustomUnderline_middle_to_Edges>
                     </Link>
+                        
                     <Box>
                     <Box>
+                    
                         {/* Icons */}
                         <List className="wrapper" display="inline-flex" listStyleType="none" >
                             <ListItem className="icon instagram" {...IconStyle}>
@@ -153,8 +155,10 @@ export const Nav = () => {
                     </Box>
                     </Box>
             </Box>
+            
             <style>{fadeIn}</style>
         </Box>
+        
     </MotionBox> 
     );
 }

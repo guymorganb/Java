@@ -1,13 +1,13 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import {Box, VStack, HStack, Flex, Image} from "@chakra-ui/react";
-import {Bg} from "../assets/util/bg.jsx";
+import {Bg} from "../assets/util/backgrounds/bg.jsx";
 import { Nav } from "../components/landingPage/nav.jsx";
 import { LeftSide } from "../components/landingPage/leftSide.jsx";
 import { RightSide } from "../components/landingPage/rightSide.jsx";
 import { ArrowSvg } from '../assets/custom_css_svgs/arrow_svg.jsx';
 import { Footer } from '../components/landingPage/footer.jsx';
-import {Bg2} from "../assets/util/bg2.jsx";
+import {Bg2} from "../assets/util/backgrounds/bg2.jsx";
 
 export const LandingPage = () => {
   

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { IconStyle } from '../../assets/custom_css_svgs/iconStyles.jsx';
 import { CustomTooltip } from '../../assets/custom_css_svgs/customeTooltip.jsx';
 import {TypewriterText} from '../../assets/custom_css_svgs/typewriter.jsx';
-import { RightSideSvg } from '../../assets/util/rightSideSvg.jsx';
+import { RightSideSvg } from '../../assets/util/backgrounds/rightSideSvg.jsx';
 // Convert Chakra UI Box to a motion component
 const MotionBox = motion(Box);
 

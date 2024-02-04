@@ -58,5 +58,11 @@ public class LetterService {
         return letterRepository.findByUserId(id);
     }
 
+    public Flux<Letter> findLettersByTag(String tag) {
+        // Choose either method based on your preference or requirements
+        return letterRepository.findByTagsContaining(tag);
+        // Or for custom @Query
+        // return letterRepository.findLettersByTag(tag);
+    }
     // Additional service methods can be added as needed
 }
